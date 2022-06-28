@@ -1,8 +1,9 @@
-FROM quay.io/souravkl11/raganork:multidevice
+FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/souravkl11/raganork-md /skl/Raganork
-WORKDIR /skl/Raganork
+RUN git clone https://github.com/dark-vro/raganork-md /5hefin/Raganork
+WORKDIR /5hefin/Raganork
 ENV TZ=Asia/Kolkata
 RUN npm install supervisor -g
 RUN yarn install --ignore-engines
+
 CMD ["node", "index.js"]
