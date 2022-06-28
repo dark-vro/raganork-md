@@ -1,8 +1,3 @@
-/* Copyright (C) 2022 Sourav KL11.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-Raganork MD - Sourav KL11
-*/
 const {
     Module
 } = require('../main');
@@ -16,7 +11,7 @@ let {
 let Lang = getString('external_plugin');
 
 Module({
-    pattern: 'install ?(.*)',
+    pattern: 'plugin ?(.*)',
     fromMe: true,
     use: 'owner',
     desc: Lang.INSTALL_DESC
@@ -56,7 +51,7 @@ Module({
 }));
 
 Module({
-    pattern: 'plugin ?(.*)',
+    pattern: 'plugin list ?(.*)',
     fromMe: true,
     use: 'owner',
     desc: Lang.PLUGIN_DESC
