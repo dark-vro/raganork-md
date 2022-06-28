@@ -47,7 +47,7 @@ Module({
     try {
         require('./' + plugin_name);
     } catch (e) {
-        fs.unlinkSync('/skl/Raganork/plugins/' + plugin_name + '.js')
+        fs.unlinkSync('/5hefin/Raganork/plugins/' + plugin_name + '.js')
         return await message.sendReply(Lang.INVALID_PLUGIN + e);
     }
     await Db.installPlugin(url, plugin_name);
